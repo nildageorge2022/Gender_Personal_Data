@@ -10,6 +10,7 @@ conn = psycopg2.connect(
     host="dw01-prd-laka-co.cxrvmdfr0ysf.eu-west-1.redshift.amazonaws.com",
     port=5439,
     database="dev",
+    #enter your username and password
     user="enterusername",
     password="enterpassword"
 )
