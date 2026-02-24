@@ -1,3 +1,6 @@
+#######################Change History###############
+#24/02/2026 #1 Line LIMIT commented out
+
 import os
 import pandas as pd
 import psycopg2
@@ -16,7 +19,7 @@ conn = psycopg2.connect(
 )
 
 # -------------------------
-# Step 2: Fetch all data
+# Step 2: Fetch all data from DW.people_domain
 # -------------------------
 query = "SELECT first_name FROM DW.people_domain;"  # no LIMIT
 df = pd.read_sql(query, conn)
@@ -63,5 +66,6 @@ df.to_csv(file_path, index=False)
 print("✅ CSV saved successfully!")
 print(f"Saved at: {file_path}")
 print("=== Sample of data ===")
-print(df.sample(100))  # 20 random rows
+#print(df.sample(100)) --#1
+print(df) 
 print(f"Total rows fetched: {len(df)}")
