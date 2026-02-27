@@ -69,3 +69,37 @@ print("=== Sample of data ===")
 #print(df.sample(100)) --#1
 print(df) 
 print(f"Total rows fetched: {len(df)}")
+------------------------------------------------------
+#import pandas as pd
+#import gender_guesser.detector as gender
+
+# Flatten cells.a to 1D
+#first_names = cells.a.values.flatten()  
+
+#detector = gender.Detector()
+
+#def gender_prob(name):
+   # result = detector.get_gender(name)
+   # if result == "male":
+    #    return 100, 0
+    #elif result == "female":
+   #     return 0, 100
+  #  elif result == "mostly_male":
+   #     return 75, 25
+   # elif result == "mostly_female":
+   #     return 25, 75
+   # elif result == "andy":
+      #  return 50, 50
+    #else:
+       # return None, None
+#male_percent, female_percent = zip(*[gender_prob(name) if pd.notnull(name) else (None, None) for name in first_names])
+#df_gender = pd.DataFrame({
+   # 'first_name': first_names,
+  #  '%_male': male_percent,
+ #   '%_female': female_percent
+#})
+
+#df_gender
+
+
+
